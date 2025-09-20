@@ -1,0 +1,120 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+/* Base */
+body {
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* Header (no logo image — logo is part of background) */
+.site-header {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+.brand-text {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.45);
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("background.jpg"); /* this background must include the baked-in logo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+/* overlay to ensure readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3,18,30,0.62) 0%, rgba(3,18,30,0.74) 100%);
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 40px 18px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: clamp(28px, 6vw, 64px);
+  line-height: 1.02;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  font-size: clamp(14px, 2.1vw, 20px);
+  margin-bottom: 22px;
+  opacity: 0.95;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  background: #fff;
+  color: #0b2540;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(3,18,30,0.2);
+}
+
+/* sections */
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 20px;
+  background: #fff;
+  text-align: left;
+}
+.section h2 { color: #213142; margin-bottom: 16px; font-size: 20px; }
+.section p { color: #333; line-height: 1.7; font-size: 16px; }
+
+/* footer */
+.site-footer {
+  text-align: center;
+  padding: 18px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .brand-text { font-size: 16px; }
+  .headline { font-size: clamp(24px, 8vw, 40px); }
+  .hero-inner { padding: 30px 12px; }
+}

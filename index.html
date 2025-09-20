@@ -4,161 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TenderPro — Coming Soon</title>
-  <style>
-    :root{
-      --accent:#0B2540; /* dark navy */
-      --accent-2:#F2994A; /* orange for logo if needed */
-      --text: #ffffff;
-      --max-width:1200px;
-    }
-
-    /* Reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-
-    body{
-      font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
-      color:var(--text);
-      background-color:#222; /* fallback while bg loads */
-    }
-
-    /* Full-bleed hero with background image */
-    .hero {
-      position:relative;
-      min-height:80vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background-image: url('background.png');
-      background-position:center;
-      background-size:cover;
-      background-repeat:no-repeat;
-      color:var(--text);
-    }
-
-    /* dark overlay to make text readable */
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg, rgba(3,18,30,0.55) 0%, rgba(3,18,30,0.65) 100%);
-      z-index:0;
-    }
-
-    header{
-      position:absolute;
-      top:18px;
-      left:24px;
-      right:24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      z-index:3;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .brand img{height:44px; width:auto; display:block}
-    .brand .name{font-weight:600; letter-spacing:0.2px; color:var(--text); font-size:18px}
-
-    nav{display:flex; gap:18px; align-items:center}
-    nav a{color:rgba(255,255,255,0.9); text-decoration:none; font-size:14px}
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      padding:48px 20px;
-      max-width:var(--max-width);
-      width:100%;
-    }
-
-    .headline{
-      font-weight:700;
-      font-size:clamp(28px, 6vw, 64px);
-      line-height:1.02;
-      margin-bottom:16px;
-      letter-spacing:-0.01em;
-    }
-    .sub{
-      font-size:clamp(14px, 2.1vw, 20px);
-      margin-bottom:28px;
-      opacity:0.95;
-    }
-    .btn{
-      display:inline-block;
-      padding:12px 22px;
-      border-radius:8px;
-      background:rgba(255,255,255,0.95);
-      color:#0b2540;
-      font-weight:600;
-      text-decoration:none;
-      box-shadow:0 6px 18px rgba(3,18,30,0.25);
-    }
-
-    /* ABOUT + CONTACT sections */
-    .section{
-      max-width:900px;
-      margin:0 auto;
-      padding:56px 18px;
-      color:#222;
-      background:#fff;
-    }
-    .section h3{
-      color:#112233;
-      margin-bottom:18px;
-      font-size:20px;
-      letter-spacing:0.6px;
-    }
-    .section p{font-size:16px; line-height:1.7; color:#3a3a3a}
-
-    .contact{padding:35px 18px; background:#f7f7f8; text-align:left}
-    .contact a{color:#0b2540; text-decoration:none; font-weight:600}
-
-    footer{padding:18px 10px; text-align:center; font-size:13px; color:#7b7b7b}
-
-    /* Responsive layout */
-    @media (min-width:900px){
-      header{left:48px; right:48px}
-      .hero-content{padding:80px 20px}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img src="logo.png" alt="TenderPro Logo" id="logo">
-      <div class="name">TenderPro</div>
-    </div>
-    <nav>
+  <header class="site-header">
+    <div class="brand-text">TenderPro</div>
+    <nav class="nav">
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" role="banner">
-      <div class="hero-content">
+    <section class="hero" role="banner" aria-label="Hero">
+      <div class="hero-inner">
         <h1 class="headline">Smart Construction<br/>Service Matchmaking</h1>
         <p class="sub">Connecting Clients & Service Businesses with Ease</p>
-        <a class="btn" href="#contact">COMING SOON</a>
+        <a class="cta" href="#contact">COMING SOON</a>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <h3>ABOUT</h3>
+    <section id="about" class="section about">
+      <h2>ABOUT</h2>
       <p>At TenderPro, we are crafting an unseen bridge — where needs and solutions discover each other. Beyond transactions, it is about trust, timing, and the quiet reshaping of how connections in construction take form.</p>
     </section>
 
-    <section class="contact" id="contact">
-      <h3>CONTACT</h3>
+    <section id="contact" class="section contact">
+      <h2>CONTACT</h2>
       <p><a href="mailto:admin@tenderpro.in">admin@tenderpro.in</a></p>
     </section>
 
-    <footer>© 2025 TenderPro. All rights reserved.</footer>
+    <footer class="site-footer">
+      © 2025 TenderPro. All rights reserved.
+    </footer>
   </main>
 </body>
 </html>
